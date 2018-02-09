@@ -1,0 +1,24 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "index.js",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+	"compile-sass": "node-sass sass/main.scss css/styles.css -w",
+	"live-server": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resendeBruno/natours.git"
+  },
+  "author": "Bruno Resende",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/resendeBruno/natours/issues"
+  },
+  "homepage": "https://resendebruno.github.io/natours"
+}
