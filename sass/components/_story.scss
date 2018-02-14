@@ -23,7 +23,7 @@
 
     &__img {
         height: 110%;
-        transition: all .8s ease-in-out;
+        transition: all .5s ease-out;
         backface-visibility: hidden;
     }
 
@@ -37,17 +37,19 @@
         top: 50%;
         left: 50%;
         transform: translateX(100%) translateY(-50%);
-        transition: all .8s ease-in-out;
-        color: transparent;
+        color: $color-white;
         text-transform: uppercase;
         text-align: center;
-        font-size: 2rem;
         backface-visibility: hidden;
+        transition: all .6s ease-in-out;
+        font-size: 1.4rem;
+        opacity: 0;
     }
 
     &:hover &__caption {
-        transform: translateX(-50%) translateY(-50%);
-        color: $color-white;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        opacity: 1;
     }
     
 }
