@@ -11,6 +11,11 @@
     &__logo {
         width: 15rem;
         height: auto;
+        transition: .5s;
+    }
+
+    &__logo:hover {
+        transform: scale(1.2);
     }
 
     &__nav,

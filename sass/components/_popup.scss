@@ -1,0 +1,85 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, .7);
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__box {
+        display: table;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: auto auto;
+        width: 80%;
+        background-color: $color-grey-light;
+        border-radius: 4px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        overflow: hidden;
+        transition: .5s;
+        transform: translate(-50%, -50%) scale(.4);
+    }
+
+    &:target &__box {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__left {
+        display: table-cell;
+        vertical-align: middle;
+        width: 33.3%;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        margin: auto 0;
+    }
+
+    &__right {
+        display: table-cell;
+        vertical-align: middle;
+        width: 66.7%;
+        padding: 2rem 4rem;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        column-count: 2;
+        column-gap: 2rem;
+        column-rule: 2px solid $color-text-light;
+    }
+
+    &__close {
+        &:visited,
+        &:link {
+            position: absolute;
+            top: 2rem;
+            right: 3rem;
+
+            font-size: 3rem;
+            font-weight: 700; 
+            line-height: 1;
+
+            text-decoration: none;
+            transition: .2s;
+            color: $color-text;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+        }
+    }
+} 

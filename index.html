@@ -15,6 +15,28 @@
     </head>
 
     <body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon">
+                    &nbsp;
+                </span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About natours</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link">Your benefits</a></li>
+                    <li class="navigation__item"><a href="#tours" class="navigation__link">Popular tours</a></li>
+                    <li class="navigation__item"><a href="#stories" class="navigation__link">Stories</a></li>
+                    <li class="navigation__item"><a href="#booking" class="navigation__link">Book now</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <header class="header">
             <div class="header__logo-box">
                 <img class="header__logo" alt="Logo" src="img/logo-white.png">
@@ -30,7 +52,7 @@
         </header>
 
         <main>
-            <section class="section-about">
+            <section class="section-about" id="about">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
                         Exciting tours for adventurous people
@@ -62,7 +84,7 @@
                 </div>
             </section>
 
-            <section class="section-features">
+            <section class="section-features" id="features">
                 <div class="row">
                     
                     <div class="col-1-of-4">
@@ -116,7 +138,7 @@
                 </div>
             </section>
 
-            <section class="section-tours">
+            <section class="section-tours" id="tours">
 
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary">
@@ -157,7 +179,7 @@
                                             $297
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">
+                                    <a href="#popup" class="btn btn--white">
                                         Book now!
                                     </a>
                                 </div>
@@ -196,7 +218,7 @@
                                             $497
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">
+                                    <a href="#popup" class="btn btn--white">
                                         Book now!
                                     </a>
                                 </div>
@@ -235,7 +257,7 @@
                                             $897
                                         </p>
                                     </div>
-                                    <a href="#" class="btn btn--white">
+                                    <a href="#popup" class="btn btn--white">
                                         Book now!
                                     </a>
                                 </div>
@@ -253,7 +275,7 @@
 
             </section>
 
-            <section class="section-stories">
+            <section class="section-stories" id="stories">
                 <div class="bg-video">
                     <video class="bg-video__content" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
@@ -314,7 +336,7 @@
                 
             </section>
 
-            <section class="section-book">
+            <section class="section-book" id="booking">
                 <div class="row">
                     <div class="book">
                         <div class="book__form">
@@ -395,6 +417,31 @@
             </div>
 
         </footer>
+
+        <div class="popup" id="popup">
+            <div class="popup__box">
+                <div class="popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#tours" class="popup__close">
+                        &times;
+                    </a>
+                    <h2 class="heading-secondary">
+                        Start booking now
+                    </h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">
+                        Read these exorcisms before booking
+                    </h3>
+                    <p class="popup__text u-margin-bottom-small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi porta.<br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi porta.
+                    </p>
+                    <a href="#" class="btn btn--green">Book now</a>
+                </div>
+            </div>
+        </div>
 
     </body>
 
