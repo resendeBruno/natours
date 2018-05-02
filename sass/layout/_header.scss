@@ -1,5 +1,5 @@
 .header {
-    height: 90vh;
+    height: 92.5vh;
 
     background-image: linear-gradient( 
         to right bottom,
@@ -10,6 +10,15 @@
     position: relative;
     background-position: top;
     background-size: cover;
+
+    @include resp (tab-port) {
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
+    @include resp (phone) {
+        clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 95%);
+    }
 
     &__logo-box {
         position: absolute;

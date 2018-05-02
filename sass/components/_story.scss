@@ -8,8 +8,19 @@
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     transform: skewX(-12deg);
 
+    @include resp (tab-port) {
+        width: 90%;
+        padding: 2rem;
+        padding-left: 4rem;
+        transform: skewX(0deg);
+    }
+
     & > * {
         transform: skewX(12deg);
+
+        @include resp (tab-port) {
+            transform: skewX(0deg);
+        }
     }
 
     &__shape {
@@ -19,6 +30,10 @@
         clip-path: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-2rem) skewX(12deg);
+
+        @include resp (tab-port) {
+            transform: translateX(-2rem) skewX(0deg);
+        }
     }
 
     &__img {

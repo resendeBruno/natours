@@ -24,11 +24,20 @@
         padding-top: 2rem;
         border-top: 1px solid $color-primary;
         width: 90%;
+
+        @include resp (tab-port) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__list {
         list-style: none;
         float: left;
+
+        @include resp (tab-port) {
+            width: 100%;
+        }
     }
 
     &__item {
@@ -57,5 +66,9 @@
         color: $color-text-light;
         float: right;
         text-align: right;
+
+        @include resp (tab-port) {
+            text-align: center;
+        }
     }
 }

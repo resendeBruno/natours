@@ -1,5 +1,17 @@
 html {
     font-size: 62.5%;
+
+    @include resp (tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include resp (tab-port) {
+        font-size: 50%;
+    }
+
+    @include resp (big-desk) {
+        font-size: 75%;
+    }
 }
 
 *,
@@ -12,4 +24,13 @@ html {
 
 body {
     box-sizing: border-box;
+    padding: 3rem;
+
+    @include resp (tab-port) {
+        padding: 1.5rem;
+    }
+
+    @include resp (phone) {
+        padding: 0;
+    }
 }   

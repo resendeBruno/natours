@@ -18,7 +18,7 @@
 
         <div class="navigation">
             <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-            <label for="nav-toggle" class="navigation__button">
+            <label for="nav-toggle" class="navigation__button" id="close-popup">
                 <span class="navigation__icon">
                     &nbsp;
                 </span>
@@ -28,11 +28,11 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#about" class="navigation__link">About natours</a></li>
-                    <li class="navigation__item"><a href="#features" class="navigation__link">Your benefits</a></li>
-                    <li class="navigation__item"><a href="#tours" class="navigation__link">Popular tours</a></li>
-                    <li class="navigation__item"><a href="#stories" class="navigation__link">Stories</a></li>
-                    <li class="navigation__item"><a href="#booking" class="navigation__link">Book now</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link" onclick="navClick()">About natours</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link" onclick="navClick()">Your benefits</a></li>
+                    <li class="navigation__item"><a href="#tours" class="navigation__link" onclick="navClick()">Popular tours</a></li>
+                    <li class="navigation__item"><a href="#stories" class="navigation__link" onclick="navClick()">Stories</a></li>
+                    <li class="navigation__item"><a href="#booking" class="navigation__link" onclick="navClick()">Book now</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,9 +75,15 @@
 
                     <div class="col-1-of-2">
                         <div class="composition">
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                            <a href="#img-popup">
+                                <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1" onclick="imgbox(1)">
+                            </a>
+                            <a href="#img-popup">
+                                <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2" onclick="imgbox(2)">
+                            </a>
+                            <a href="#img-popup">
+                                <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3" onclick="imgbox(3)">
+                            </a>
                         </div>
                     </div>
 
@@ -179,7 +185,7 @@
                                             $297
                                         </p>
                                     </div>
-                                    <a href="#popup" class="btn btn--white">
+                                    <a href="#booking-popup" class="btn btn--white">
                                         Book now!
                                     </a>
                                 </div>
@@ -218,7 +224,7 @@
                                             $497
                                         </p>
                                     </div>
-                                    <a href="#popup" class="btn btn--white">
+                                    <a href="#booking-popup" class="btn btn--white">
                                         Book now!
                                     </a>
                                 </div>
@@ -257,7 +263,7 @@
                                             $897
                                         </p>
                                     </div>
-                                    <a href="#popup" class="btn btn--white">
+                                    <a href="#booking-popup" class="btn btn--white">
                                         Book now!
                                     </a>
                                 </div>
@@ -418,31 +424,56 @@
 
         </footer>
 
-        <div class="popup" id="popup">
-            <div class="popup__box">
-                <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+        <div class="booking-popup" id="booking-popup">
+            <a href="#close-popup" class="booking-popup__bg">
+                &nbsp;
+            </a>                    
+            <div class="booking-popup__box">
+                <div class="booking-popup__left">
+                    <img src="img/nat-8.jpg" alt="Tour photo" class="booking-popup__img">
+                    <img src="img/nat-9.jpg" alt="Tour photo" class="booking-popup__img">
                 </div>
-                <div class="popup__right">
-                    <a href="#tours" class="popup__close">
+                <div class="booking-popup__right">
+                    <a href="#close-popup" class="booking-popup__close">
                         &times;
                     </a>
                     <h2 class="heading-secondary">
                         Start booking now
                     </h2>
                     <h3 class="heading-tertiary u-margin-bottom-small">
-                        Read these exorcisms before booking
+                        Read these terms before booking
                     </h3>
-                    <p class="popup__text u-margin-bottom-small">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi porta.<br>
+                    <p class="booking-popup__text u-margin-bottom-medium">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet. Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi porta.
                     </p>
-                    <a href="#" class="btn btn--green">Book now</a>
+                    <a href="#" class="btn btn--green u-margin-bottom-small">
+                        Book now
+                    </a>
                 </div>
             </div>
         </div>
 
+        <div class="img-popup" id="img-popup">
+            <a href="#close-popup" class="img-popup__bg">
+                &nbsp;
+            </a>
+            <a href="#close-popup" class="img-popup__close">
+                &times;
+            </a>
+            <div class="img-popup__box img-popup__box--1" id="popup-box">
+                <a href="#img-popup" class="img-popup__prev" onclick="prev()">
+                    &prec;
+                </a>
+                <a href="#img-popup" class="img-popup__next" onclick="next()">
+                    &succ;
+                </a>
+            </div>
+        </div>
+
     </body>
+
+
+    <script type="text/javascript" src="js/natours.img-popup.js"></script>
+    <script type="text/javascript" src="js/natours.nav.js"></script>
 
 </html>

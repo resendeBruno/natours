@@ -6,6 +6,18 @@
 
     &:not(:last-child) {
         margin-bottom: $grid-gutter-y;
+
+        @include resp (tab-port) {
+            margin-bottom: $grid-gutter-y-small;
+        }
+    }
+
+    @include resp (tab-port) {
+        max-width: $grid-width-small;
+    }
+
+    @include resp (phone) {
+        max-width: $grid-width-smallest;
     }
 
     [class^="col-"] {
@@ -13,6 +25,15 @@
 
         &:not(:last-child) {
             margin-right: $grid-gutter-x;
+
+            @include resp (tab-port) {
+                margin-right: 0;
+                margin-bottom: $grid-gutter-y-small;
+            }
+        }
+
+        @include resp (tab-port) {
+            width: 100% !important;
         }
     }
 

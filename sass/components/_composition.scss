@@ -8,11 +8,9 @@
         position: absolute;
         transition: .2s;       
         outline-offset: 1.5rem; 
-            
-        &:hover {
-            transform: scale(1.1) translateY(-1rem);
-            z-index: 20;
-            outline: 1rem solid $color-primary;
+
+        @include resp(tab-port) {
+            width: 55%;
         }
 
         &--p1 {
@@ -31,6 +29,12 @@
             left: 20%;
             top: 10rem;
             z-index: 7;
+        }
+            
+        &:hover {
+            transform: scale(1.1) translateY(-1rem);
+            z-index: 20;
+            outline: 1rem solid $color-primary;
         }
     }
 

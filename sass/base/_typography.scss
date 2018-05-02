@@ -3,7 +3,6 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: $color-text; 
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -19,6 +18,11 @@ body {
         letter-spacing: 3.25rem;
         font-weight: 400;
         margin-bottom: 1rem;
+
+        @include resp (phone) {
+            font-size: 5rem;
+            letter-spacing: 1rem;
+        }
     }
 
     &--sub {
@@ -27,6 +31,10 @@ body {
         font-size: 2rem;
         letter-spacing: 1.6rem;
         font-weight: 700;
+
+        @include resp (phone) {
+            letter-spacing: 1rem;
+        }
     }
 }
 
@@ -41,9 +49,21 @@ body {
     letter-spacing: .2rem;
     transition: all .2s;
 
+    @include resp (tab-port) {
+        font-size: 3.2rem;
+    }
+
+    @include resp (phone) {
+        font-size: 2.8rem;
+    }
+
     &:hover {
         transform: scale(1.1);
         text-shadow: 0 1rem 4rem rgba($color-black, .4);
+
+        @include resp (phone) {
+            transform: translateY(-1rem) scale(1.04);
+        }
     }
 }
 

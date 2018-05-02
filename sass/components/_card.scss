@@ -16,6 +16,10 @@
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
+        @include resp(tab-port) {
+            overflow: visible;
+        }
+
         &--back {
             transform: rotateY(-180deg);
 
@@ -131,6 +135,13 @@
         top: 12rem;
         right: 2rem;
         width: 65%;
+
+        @include resp(tab-port) {
+            font-size: 2.4rem;
+            top: 20rem;
+            width: 100%;
+            right: 1rem;
+        }
 
         &-span {
             -webkit-box-decoration-break: clone;

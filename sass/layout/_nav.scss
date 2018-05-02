@@ -15,6 +15,11 @@
         text-align: center; 
         cursor: pointer;
         background-color: $color-grey-light;
+
+        @include resp (tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
     }
 
     &__icon {
@@ -28,7 +33,7 @@
             width: 3rem;
             height: 2px;
             background-color: $color-text;
-            transition: all .3s, background-color .15s;
+            transition: all .3s, background-color .1s;
         }
         
         &::before,
@@ -73,20 +78,27 @@
     }
 
     &__background {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
+        visibility: hidden;
+        top: 6.5rem; 
         right: 6.5rem;
         z-index: 100;
-        transition: all 0.8s cubic-bezier(0.9, 0, 0.07, 1);
+        transition: all .8s cubic-bezier(0.9, 0, 0.07, 1);
         
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
+
+        @include resp (tab-port) {
+            top: 4.5rem;
+            right: 4.5rem;
+        }
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(50);
+        transform: scale(75);
+        visibility: visible;
     }
 
     &__nav {
@@ -98,7 +110,11 @@
         z-index: 105;
         visibility: hidden;
         opacity: 0;
-        transition: all 0.8s cubic-bezier(0.7, -0.5, 0.25, 1.5);
+        transition: all .8s cubic-bezier(0.7, -0.5, 0.25, 1.5);
+
+        @include resp(tab-port) {
+            width: 100vw;
+        }
     }
 
     &__checkbox:checked ~ &__nav {

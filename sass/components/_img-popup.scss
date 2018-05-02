@@ -1,0 +1,111 @@
+.img-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-black, .7);
+    z-index: 1000;
+
+    opacity: 0;
+    visibility: hidden; 
+    transition: .5s;
+    
+    &__bg {
+        padding: 200%;
+    }
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: auto auto;
+        max-width: 90%;
+        max-height: 90%;
+        background-color: transparent;
+        border-radius: 4px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        overflow: hidden;
+        transition: .5s;
+        transform: translate(-50%, -50%) scale(.4);
+
+        background-size: cover; 
+        background-position: center;
+        padding: 22.5% 45%;
+
+        &--1 {            
+            background-image: url(../img/nat-1-large.jpg);
+        }
+
+        &--2 {            
+            background-image: url(../img/nat-2-large.jpg);
+        }
+
+        &--3 {            
+            background-image: url(../img/nat-3-large.jpg);
+        }
+    }
+
+    &:target &__box {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__prev {
+        left: 0%;
+    }        
+
+    &__next {
+        right: 0%;   
+    }
+
+    &__prev:link,
+    &__prev:visited,
+    &__next:link,
+    &__next:visited {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        padding: 100% 1.5rem;
+        text-decoration: none;
+        font-weight: 900;
+        color: transparent;
+        background-color: transparent;
+        transition: all .5s;
+        font-size: 3rem;
+    }
+
+    &__prev:hover,
+    &__next:hover {
+        background-color: rgba($color-black, .7);
+        color: $color-white;
+    } 
+
+    &__close {
+        &:visited,
+        &:link {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+
+            font-size: 5rem;
+            font-weight: 900; 
+            line-height: 0.6;
+
+            text-decoration: none;
+            transition: .2s;
+            color: $color-white;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+        }
+    }
+} 
