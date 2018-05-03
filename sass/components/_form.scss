@@ -55,6 +55,11 @@
     &__radio-group {
         width: 49%;
         display: inline-block;
+
+        @include resp(tab-port) {
+            display: block;
+            padding: 1rem;
+        }
     }
 
     &__radio-label {
@@ -69,7 +74,6 @@
         height: 3rem;
         border: 5px solid $color-primary;
         border-radius: 50%;
-        display: inline-block;
         position: absolute;
         top: -.5rem;
         left: 0;

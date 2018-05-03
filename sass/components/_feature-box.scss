@@ -16,6 +16,7 @@
         display: inline-block;
         background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
         -webkit-background-clip: text;
+        background-clip: text;
         color: transparent;
     }
 }

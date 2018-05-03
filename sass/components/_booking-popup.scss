@@ -68,6 +68,10 @@
 
         @include resp (tab-port) {
             width: 100%;
+
+            & h2 {
+                display: none;
+            }
         }
     }
 

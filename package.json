@@ -8,7 +8,8 @@
     "node-sass": "^4.7.2"
   },
   "scripts": {
-    "compile-sass": "node-sass sass/main.scss css/styles.css -w"
+    "compile-sass": "node-sass sass/main.scss css/styles.css -w",
+    "live-server": "live-server"
   },
   "repository": {
     "type": "git",

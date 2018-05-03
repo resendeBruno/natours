@@ -101,6 +101,11 @@
             text-decoration: none;
             transition: .2s;
             color: $color-white;
+
+            @include resp(tab-port) {
+                top: 1rem;
+                right: 1rem;
+            }
         }
 
         &:hover,

@@ -97,7 +97,7 @@
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(75);
+        transform: scale(100);
         visibility: visible;
     }
 

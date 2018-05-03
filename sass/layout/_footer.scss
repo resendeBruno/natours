@@ -55,11 +55,13 @@
         text-transform: uppercase;
         display: inline-block;
         transition: all .5s;
+        border-bottom: 1px solid transparent;
     }
 
     &__link:hover,
     &__link:active {
         color: $color-primary;
+        border-bottom: 1px solid $color-primary;
     }
 
     &__copyright {

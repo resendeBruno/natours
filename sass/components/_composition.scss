@@ -7,7 +7,8 @@
         border-radius: 2px;
         position: absolute;
         transition: .2s;       
-        outline-offset: 1.5rem; 
+        outline-offset: 0; 
+        outline: 0 solid transparent;
 
         @include resp(tab-port) {
             width: 55%;
@@ -33,7 +34,8 @@
             
         &:hover {
             transform: scale(1.1) translateY(-1rem);
-            z-index: 20;
+            z-index: 20;     
+            outline-offset: 1.5rem; 
             outline: 1rem solid $color-primary;
         }
     }
