@@ -1,5 +1,5 @@
 var box = document.getElementById("popup-box");
-var img = 1;
+var img = imgbox(randomIntBetween(1, 3));
 
 function imgbox(n) {
     switch (n) {

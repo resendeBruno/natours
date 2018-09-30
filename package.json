@@ -4,8 +4,9 @@
   "description": "Landing page",
   "main": "index.html",
   "devDependencies": {
+    "autoprefixer": "^9.1.5",
     "live-server": "^1.2.0",
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.9.3"
   },
   "scripts": {
     "compile-sass": "node-sass sass/main.scss css/styles.css -w",

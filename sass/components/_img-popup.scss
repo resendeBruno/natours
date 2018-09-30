@@ -9,6 +9,7 @@
 
     opacity: 0;
     visibility: hidden; 
+    -webkit-transition: .5s; 
     transition: .5s;
     
     &__bg {
@@ -29,10 +30,13 @@
         max-height: 90%;
         background-color: transparent;
         border-radius: 4px;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+                box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
         overflow: hidden;
+        -webkit-transition: .5s;
         transition: .5s;
-        transform: translate(-50%, -50%) scale(.4);
+        -webkit-transform: translate(-50%, -50%) scale(.4);
+                transform: translate(-50%, -50%) scale(.4);
 
         background-size: cover; 
         background-position: center;
@@ -52,7 +56,8 @@
     }
 
     &:target &__box {
-        transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+                transform: translate(-50%, -50%) scale(1);
     }
 
     &__prev {
@@ -70,13 +75,15 @@
         display: inline-block;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
         margin: 0 auto;
         padding: 100% 1.5rem;
         text-decoration: none;
         font-weight: 900;
         color: transparent;
         background-color: transparent;
+        -webkit-transition: all .5s;
         transition: all .5s;
         font-size: 3rem;
     }
@@ -99,6 +106,7 @@
             line-height: 0.6;
 
             text-decoration: none;
+            -webkit-transition: .2s;
             transition: .2s;
             color: $color-white;
 

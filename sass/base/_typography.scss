@@ -8,12 +8,14 @@ body {
 .heading-primary {
     text-transform: uppercase;
     color: $color-grey-light;
-    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     margin-bottom: 6rem;
 
     &--main {
         display: block;
-        animation: moveInLeft 1s ease-out;
+        -webkit-animation: moveInLeft 1s ease-out;
+                animation: moveInLeft 1s ease-out;
         font-size: 6rem;
         letter-spacing: 3.25rem;
         font-weight: 400;
@@ -27,7 +29,8 @@ body {
 
     &--sub {
         display: block;
-        animation: moveInRight 1s ease-out;
+        -webkit-animation: moveInRight 1s ease-out;
+                animation: moveInRight 1s ease-out;
         font-size: 2rem;
         letter-spacing: 1.6rem;
         font-weight: 700;
@@ -43,11 +46,18 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
-    color: transparent;
     letter-spacing: .2rem;
-    transition: all .2s;
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    color: $color-primary-dark;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        background-image: -webkit-gradient(linear, left top, right top, from($color-primary-light), to($color-primary-dark));
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+                background-clip: text;
+        color: transparent;
+    }
 
     @include resp (tab-port) {
         font-size: 3.2rem;
@@ -58,11 +68,13 @@ body {
     }
 
     &:hover {
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
         text-shadow: 0 1rem 4rem rgba($color-black, .4);
 
         @include resp (phone) {
-            transform: translateY(-1rem) scale(1.04);
+            -webkit-transform: translateY(-1rem) scale(1.04);
+                    transform: translateY(-1rem) scale(1.04);
         }
     }
 }

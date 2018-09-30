@@ -3,9 +3,11 @@
      
     &__photo {
         width: 55%;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+        -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+                box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         border-radius: 2px;
         position: absolute;
+        -webkit-transition: .2s;
         transition: .2s;       
         outline-offset: 0; 
         outline: 0 solid transparent;
@@ -33,7 +35,8 @@
         }
             
         &:hover {
-            transform: scale(1.1) translateY(-1rem);
+            -webkit-transform: scale(1.1) translateY(-1rem);
+                    transform: scale(1.1) translateY(-1rem);
             z-index: 20;     
             outline-offset: 1.5rem; 
             outline: 1rem solid $color-primary;
@@ -41,6 +44,7 @@
     }
 
     &:hover &__photo:not(:hover) {
-        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
     }
 }
