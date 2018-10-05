@@ -7,32 +7,32 @@
     &:not(:last-child) {
         margin-bottom: $grid-gutter-y;
 
-        @include resp (tab-port) {
+        @include resp(tab-port) {
             margin-bottom: $grid-gutter-y-small;
         }
     }
 
-    @include resp (tab-port) {
+    @include resp(tab-port) {
         max-width: $grid-width-small;
     }
 
-    @include resp (phone) {
+    @include resp(phone) {
         max-width: $grid-width-smallest;
     }
 
-    [class^="col-"] {
+    [class^='col-'] {
         float: left;
 
         &:not(:last-child) {
             margin-right: $grid-gutter-x;
 
-            @include resp (tab-port) {
+            @include resp(tab-port) {
                 margin-right: 0;
                 margin-bottom: $grid-gutter-y-small;
             }
         }
 
-        @include resp (tab-port) {
+        @include resp(tab-port) {
             width: 100% !important;
         }
     }
@@ -45,8 +45,10 @@
         width: calc((100% - 2 * #{$grid-gutter-x}) / 3);
     }
 
-    .col-2-of-3 { 
-        width: calc(2 * ((100% - 2 * #{$grid-gutter-x}) / 3 ) + #{$grid-gutter-x});
+    .col-2-of-3 {
+        width: calc(
+            2 * ((100% - 2 * #{$grid-gutter-x}) / 3) + #{$grid-gutter-x}
+        );
     }
 
     .col-1-of-4 {
@@ -54,10 +56,14 @@
     }
 
     .col-2-of-4 {
-        width: calc(2 * ((100% - 3 * #{$grid-gutter-x}) / 4) + #{$grid-gutter-x});
+        width: calc(
+            2 * ((100% - 3 * #{$grid-gutter-x}) / 4) + #{$grid-gutter-x}
+        );
     }
 
     .col-3-of-4 {
-        width: calc(3 * ((100% - 3 * #{$grid-gutter-x}) / 4) + 2 * #{$grid-gutter-x});
+        width: calc(
+            3 * ((100% - 3 * #{$grid-gutter-x}) / 4) + 2 * #{$grid-gutter-x}
+        );
     }
-} 
+}

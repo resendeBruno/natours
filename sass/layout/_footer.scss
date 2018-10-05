@@ -1,7 +1,13 @@
 .footer {
     font-size: 1.6rem;
     background-color: #333;
-    padding: 10rem 4rem; 
+    padding: 10rem 4rem;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        & > .row > * {
+            margin-right: 0 !important;
+        }
+    }
 
     &__logo-box {
         text-align: center;
@@ -11,13 +17,17 @@
     &__logo {
         width: 15rem;
         height: auto;
-        -webkit-transition: .5s;
-        transition: .5s;
-    }
 
-    &__logo:hover {
-        -webkit-transform: scale(1.2);
+        & > img,
+        & > source {
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+
+            &:hover {
+                -webkit-transform: scale(1.2);
                 transform: scale(1.2);
+            }
+        }
     }
 
     &__nav,
@@ -27,7 +37,7 @@
         border-top: 1px solid $color-primary;
         width: 90%;
 
-        @include resp (tab-port) {
+        @include resp(tab-port) {
             width: 100%;
             text-align: center;
         }
@@ -37,7 +47,7 @@
         list-style: none;
         float: left;
 
-        @include resp (tab-port) {
+        @include resp(tab-port) {
             width: 100%;
         }
     }
@@ -56,8 +66,8 @@
         text-decoration: none;
         text-transform: uppercase;
         display: inline-block;
-        -webkit-transition: all .5s;
-        transition: all .5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
         border-bottom: 1px solid transparent;
     }
 
@@ -72,7 +82,7 @@
         float: right;
         text-align: right;
 
-        @include resp (tab-port) {
+        @include resp(tab-port) {
             text-align: center;
         }
     }

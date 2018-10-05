@@ -1,14 +1,13 @@
 .btn {
-
     &:hover {
         -webkit-transform: translateY(-3px);
-                transform: translateY(-3px);
+        transform: translateY(-3px);
         -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-        
-        &::after {    
-            -webkit-transform: scaleX(1.4) scaleY(1.6);    
-                    transform: scaleX(1.4) scaleY(1.6);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after {
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
     }
@@ -21,39 +20,39 @@
         padding: 1.6rem 4rem;
         display: inline-block;
         border-radius: 5rem;
-        -webkit-transition: all .2s;
-        transition: all .2s;    
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
         position: relative;
         font-size: 1.6rem;
 
         border: none;
         cursor: pointer;
     }
-    
-    &:focus, 
+
+    &:focus,
     &:active {
-        outline: none;    
-        -webkit-transform: translateY(-1px);    
-                transform: translateY(-1px);
+        outline: none;
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
         -webkit-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-                box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
-    
+
     &::after {
-        content: "";
+        content: '';
         display: inline-block;
         height: 100%;
         width: 100%;
         border-radius: 5rem;
         position: absolute;
         top: 0;
-        left: 0;    
+        left: 0;
         z-index: -1;
-        -webkit-transition: all .4s;
-        transition: all .4s;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
     }
-    
-    &--white {    
+
+    &--white {
         background-color: $color-white;
         color: $color-text;
 
@@ -62,7 +61,7 @@
         }
     }
 
-    &--green {    
+    &--green {
         background-color: $color-primary;
         color: $color-white;
 
@@ -73,7 +72,6 @@
 }
 
 .btn-text {
-
     &:link,
     &:visited {
         text-decoration: none;
@@ -83,8 +81,8 @@
         border-bottom: 1px solid $color-primary;
         padding: 4px;
         font-size: 1.8rem;
-        -webkit-transition: .2s;
-        transition: .2s;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
     }
 
     &:hover {
@@ -92,15 +90,15 @@
         color: $color-white;
         border-bottom: 1px solid $color-primary;
         -webkit-transform: translateY(-3px);
-                transform: translateY(-3px);
+        transform: translateY(-3px);
         -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     }
 
     &:active {
         -webkit-transform: translateY(-1px);
-                transform: translateY(-1px);
+        transform: translateY(-1px);
         -webkit-box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-                box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
 }

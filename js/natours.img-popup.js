@@ -1,6 +1,3 @@
-var box = document.getElementById("popup-box");
-var img = imgbox(randomIntBetween(1, 3));
-
 function imgbox(n) {
     switch (n) {
         case 1:
@@ -42,3 +39,6 @@ function prev() {
 function randomIntBetween(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+var box = document.getElementById("popup-box");
+var img = imgbox(randomIntBetween(1, 3));

@@ -1,29 +1,39 @@
 .feature-box {
-    background-color: rgba($color-white, .8);
+    background-color: rgba($color-white, 0.8);
     padding: 2.5rem;
     text-align: center;
     border-radius: 4px;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-            box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
-    -webkit-transition: .2s;
-    transition: .2s; 
+    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
 
-    &:hover {        
-        -webkit-transform: scale(1.1) translateY(-2rem);        
-                transform: scale(1.1) translateY(-2rem);
+    &:hover {
+        -webkit-transform: scale(1.1) translateY(-2rem);
+        transform: scale(1.1) translateY(-2rem);
     }
 
     &__icon {
         font-size: 6rem;
-        margin-bottom: .75rem;
+        margin-bottom: 0.75rem;
         display: inline-block;
         color: $color-primary-dark;
-    
+
         @supports (background-clip: text) or (-webkit-background-clip: text) {
-            background-image: -webkit-gradient(linear, left top, right top, from($color-primary-light), to($color-primary-dark));
-            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+            background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                from($color-primary-light),
+                to($color-primary-dark)
+            );
+            background-image: linear-gradient(
+                to right,
+                $color-primary-light,
+                $color-primary-dark
+            );
             -webkit-background-clip: text;
-                    background-clip: text;
+            background-clip: text;
             color: transparent;
         }
     }

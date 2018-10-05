@@ -1,28 +1,28 @@
 .story {
     width: 80%;
     margin: 0 auto;
-    background-color: rgba($color-white, .8);
-    border-radius: 4px; 
+    background-color: rgba($color-white, 0.8);
+    border-radius: 4px;
     padding: 4rem;
     -webkit-box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-            box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+    box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     -webkit-transform: skewX(-12deg);
-            transform: skewX(-12deg);
+    transform: skewX(-12deg);
 
-    @include resp (tab-port) {
+    @include resp(tab-port) {
         width: 90%;
         padding: 2rem;
         -webkit-transform: skewX(0deg);
-                transform: skewX(0deg);
+        transform: skewX(0deg);
     }
 
     & > * {
         -webkit-transform: skewX(12deg);
-                transform: skewX(12deg);
+        transform: skewX(12deg);
 
-        @include resp (tab-port) {
-                -webkit-transform: skewX(0deg);
-                        transform: skewX(0deg);
+        @include resp(tab-port) {
+            -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
         }
     }
 
@@ -31,39 +31,44 @@
         height: 15rem;
         float: left;
         -webkit-transform: skewX(12deg);
-                transform: skewX(12deg);
+        transform: skewX(12deg);
         margin-right: 2rem;
         overflow: hidden;
         border-radius: 50%;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
 
-        // @supports (-webkit-clip-path: circle(50% at 50% 50%)) or (clip-path: circle(50% at 50% 50%)) {
-        //         -webkit-clip-path: circle(50% at 50% 50%);
-        //                 clip-path: circle(50% at 50% 50%);
-        //         width: 15rem;
-        //         height: 15rem;
-        // }
+        @supports (
+            (-webkit-clip-path: circle(50% at 50% 50%)) or
+                (clip-path: circle(50% at 50% 50%))
+        ) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
 
-        @include resp (tab-port) {
+        @include resp(tab-port) {
             -webkit-transform: skewX(0deg);
-                    transform: skewX(0deg);
+            transform: skewX(0deg);
         }
     }
 
     &__img {
         height: 110%;
-        -webkit-transition: all .5s ease-out;
-        transition: all .5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
         -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
+        backface-visibility: hidden;
     }
 
     &:hover &__img {
         -webkit-transform: scale(1.2) translateX(-25%);
-                transform: scale(1.2) translateX(-25%);
-        -webkit-filter: blur(2px) brightness(.7);
-                filter: blur(2px) brightness(.7);
+        transform: scale(1.2) translateX(-25%);
+        -webkit-filter: blur(2px) brightness(0.7);
+        filter: blur(2px) brightness(0.7);
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+            opacity: 0.2;
+        }
     }
 
     &__caption {
@@ -71,23 +76,28 @@
         top: 50%;
         left: 50%;
         -webkit-transform: translateX(100%) translateY(-50%);
-                transform: translateX(100%) translateY(-50%);
-        color: $color-white;
+        transform: translateX(100%) translateY(-50%);
         text-transform: uppercase;
         text-align: center;
         -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-        -webkit-transition: all .6s ease-in-out;
-        transition: all .6s ease-in-out;
+        backface-visibility: hidden;
+        -webkit-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
         font-size: 1.4rem;
-        opacity: 0;
+        color: transparent;
     }
 
     &:hover &__caption {
         -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         font-size: 2rem;
-        opacity: 1;
+        color: $color-white;
+        @media screen and (-ms-high-contrast: active),
+            (-ms-high-contrast: none) {
+            color: $color-text;
+            font-weight: 700;
+            font-size: 2.4rem;
+            letter-spacing: 0.25rem;
+        }
     }
-    
 }

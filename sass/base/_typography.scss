@@ -1,27 +1,27 @@
 body {
-    font-family: "Lato", sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: $color-text; 
+    color: $color-text;
 }
 
 .heading-primary {
     text-transform: uppercase;
     color: $color-grey-light;
     -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
     margin-bottom: 6rem;
 
     &--main {
         display: block;
         -webkit-animation: moveInLeft 1s ease-out;
-                animation: moveInLeft 1s ease-out;
+        animation: moveInLeft 1s ease-out;
         font-size: 6rem;
         letter-spacing: 3.25rem;
         font-weight: 400;
         margin-bottom: 1rem;
 
-        @include resp (phone) {
+        @include resp(phone) {
             font-size: 5rem;
             letter-spacing: 1rem;
         }
@@ -30,12 +30,12 @@ body {
     &--sub {
         display: block;
         -webkit-animation: moveInRight 1s ease-out;
-                animation: moveInRight 1s ease-out;
+        animation: moveInRight 1s ease-out;
         font-size: 2rem;
         letter-spacing: 1.6rem;
         font-weight: 700;
 
-        @include resp (phone) {
+        @include resp(phone) {
             letter-spacing: 1rem;
         }
     }
@@ -46,35 +46,45 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
-    letter-spacing: .2rem;
-    -webkit-transition: all .2s;
-            transition: all .2s;
+    letter-spacing: 0.2rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
     color: $color-primary-dark;
 
     @supports (background-clip: text) or (-webkit-background-clip: text) {
-        background-image: -webkit-gradient(linear, left top, right top, from($color-primary-light), to($color-primary-dark));
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        background-image: -webkit-gradient(
+            linear,
+            left top,
+            right top,
+            from($color-primary-light),
+            to($color-primary-dark)
+        );
+        background-image: linear-gradient(
+            to right,
+            $color-primary-light,
+            $color-primary-dark
+        );
         -webkit-background-clip: text;
-                background-clip: text;
+        background-clip: text;
         color: transparent;
     }
 
-    @include resp (tab-port) {
+    @include resp(tab-port) {
         font-size: 3.2rem;
     }
 
-    @include resp (phone) {
+    @include resp(phone) {
         font-size: 2.8rem;
     }
 
     &:hover {
         -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-        text-shadow: 0 1rem 4rem rgba($color-black, .4);
+        transform: scale(1.1);
+        text-shadow: 0 1rem 4rem rgba($color-black, 0.4);
 
-        @include resp (phone) {
+        @include resp(phone) {
             -webkit-transform: translateY(-1rem) scale(1.04);
-                    transform: translateY(-1rem) scale(1.04);
+            transform: translateY(-1rem) scale(1.04);
         }
     }
 }
